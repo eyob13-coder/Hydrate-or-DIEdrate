@@ -1,0 +1,18 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main water drop -->
+  <path d="M20 3C12 10 5 20 5 28C5 35 12 40 20 40C28 40 35 35 35 28C35 20 28 10 20 3Z" fill="url(#waterGradient)"/>
+  
+  <!-- Water reflection highlight -->
+  <path d="M25 15C25 18 23 20 20 20C17 20 15 18 15 15C15 12 17 10 20 10C23 10 25 12 25 15Z" fill="white" fill-opacity="0.7"/>
+  
+  <!-- Ripple effect at bottom -->
+  <path d="M12 30C10 32 8 35 10 37C12 39 15 37 17 35" stroke="#A5D8FF" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <defs>
+    <!-- Gradient matching your hydration theme -->
+    <linearGradient id="waterGradient" x1="20" y1="3" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/> <!-- Blue-500 -->
+      <stop offset="1" stop-color="#60A5FA"/> <!-- Blue-400 -->
+    </linearGradient>
+  </defs>
+</svg>
