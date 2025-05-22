@@ -5,7 +5,7 @@ const page = () => {
   return (
     <>
     <h3>Let AI assist you.</h3>
-    <Agent/>
+    <Agent userName = "YOU" userId = "user1" type ="generate"/>
     </>
   )
 }
