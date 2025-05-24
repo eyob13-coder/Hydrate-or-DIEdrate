@@ -13,7 +13,7 @@ export default function Home() {
       <h2 className="font-bold">Hydrate Better,with <span className="font-bold text-xl bg-gradient-to-r from-cyan-600 to-blue-800 bg-clip-text text-transparent">AI Tracking & Feedback</span></h2>
       <p className = "text-lg">Let AI help you reach your hydration goals</p>
       <Button asChild className="max-sm:w-full w-fit bg-primary-200 text-blue-100 hover:bg-primary-200/80 rounded-full font-bold px-5 cursor-pointer min-h-10">
-        <Link href="/button">Start your Hydration.</Link>
+        <Link href="/assistant">Start your Hydration.</Link>
 
       </Button>
     </div>
