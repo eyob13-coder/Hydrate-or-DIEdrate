@@ -1,4 +1,3 @@
-// lib/gemini.ts
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
 

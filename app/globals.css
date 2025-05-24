@@ -212,12 +212,7 @@
   @apply flex mx-auto max-w-7xl flex-col gap-12 my-12 px-16 max-sm:px-4 max-sm:my-8;
 }
 
-  /* .card-cta {
-    @apply flex flex-row rounded-3xl px-16 py-6 items-center justify-between max-sm:px-4;
-  } */
-  /* .btn-primary {
-    @apply w-fit !bg-primary-200 !text-dark-100 hover:!bg-primary-200/80 !rounded-full !font-bold px-5 cursor-pointer min-h-10;
-  } */
+  
 
   .light-theme {
     --background: oklch(0.97 0.01 230);
@@ -259,9 +254,6 @@
     --sidebar-border: oklch(0.90 0.01 230 / 20%);
     --sidebar-ring: oklch(0.70 0.10 220);
   }
-/*   
-  .animate-speak {
-      @apply absolute inline-flex size-5/6 animate-ping rounded-full bg-primary-200 opacity-75;
-    } */
+
 
   

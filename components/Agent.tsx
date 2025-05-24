@@ -23,10 +23,9 @@ interface AgentProps {
 interface SavedMessage {
   role: 'user' | 'system' | 'assistant';
   content: string;
-  createdAt: string;
 }
 
-const Agent = ({ userName, userId, type }) => {
+const Agent = ({ userName, userId, type }: AgentProps) => {
   const router = useRouter();
   const [callStatus, setCallStatus] = useState<CallStatus>(CallStatus.INACTIVE);
   const [messages, setMessages] = useState<SavedMessage[]>([]);
@@ -37,8 +36,8 @@ const Agent = ({ userName, userId, type }) => {
     const onCallEnd = () => setCallStatus(CallStatus.FINISHED);
     const onMessage = (message: Message) => {
       if(message.type === 'transcript' && message.transcriptType === 'final'){
-        const newMessage: { role: message.role, content: message.transcript}
-        setMessages ((prev) => [...prev, newMessage])
+        const newMessage = { role: message.role, content: message.transcript}
+        setMessages ((prev) => [...prev, newMessage]);
       }
     }
   
