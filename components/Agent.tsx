@@ -4,8 +4,15 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 import { cn } from "@/lib/utils";
-import vapi  from '@/lib/vapi.sdk'
+import vapi from '@/lib/vapi.sdk'
 import { useRouter } from "next/navigation";
+
+interface Message {
+  type: string;
+  transcriptType?: string;
+  role: 'user' | 'system' | 'assistant';
+  transcript: string;
+}
 
 enum CallStatus {
   INACTIVE = "INACTIVE",
@@ -69,19 +76,20 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
   }, [])
 
   useEffect(() =>{
-    if(callStatus === CallStatus.FINISHED) router.push('/')
+    if(callStatus === CallStatus.FINISHED) router.push('')
   }, [messages, callStatus, type, userId]);
 
 
 
   const handleCall = async() => {
     setCallStatus (CallStatus.CONNECTING);
-    await vapi.start(process.env, {
-      variableValues:{
+    await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
+      variableValues: {
         username: userName,
-        userid: userId, 
-
-      }
+        userid: userId,
+      },
+      clientMessages: [],
+      serverMessages: []
     })
     }
 
