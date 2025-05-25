@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* HERO SECTION */}
-      <div className="flex flex-row rounded-3xl px-16 py-6 items-center justify-between max-sm:flex-col max-sm:px-4">
+      <div className="flex flex-row blue-gradient-purple rounded-3xl px-16 py-6 items-center justify-between max-sm:flex-col max-sm:px-4">
         <div className="flex flex-col gap-6 max-w-lg">
           <h2 className="font-bold text-2xl">
             Hydrate Better, with{" "}
@@ -52,7 +52,7 @@ export default function Home() {
         {/* Four Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-white rounded-2xl shadow p-4 flex flex-col items-center text-center">
-            <Image src="/brain.png" alt="brain" width={40} height={40} />
+            <Image src="/brain.jpg" alt="brain" width={40} height={40} />
             <h4 className="text-lg font-semibold mt-2">Boosts Brain Power</h4>
             <p className="text-sm text-gray-500">
               Staying hydrated helps you focus and think clearly.

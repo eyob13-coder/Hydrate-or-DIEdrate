@@ -142,14 +142,14 @@ const isCallInactiveorFinished = callStatus === CallStatus.INACTIVE || callStatu
 
       <div className="w-full flex justify-center mt-6">
         {callStatus !== CallStatus.ACTIVE ? (
-          <button onClick={handleCall} className="relative inline-block px-7 py-3 font-bold text-sm leading-5 text-white bg-success-100 rounded-full min-w-28">
+          <button onClick={handleCall} className="relative inline-block px-7 py-3 font-bold text-sm leading-5 text-white bg-success-300 rounded-full min-w-28">
             <span className={cn("absolute animate-ping rounded-full opacity-75", callStatus !== CallStatus.CONNECTING && "hidden")} />
             <span>{isCallInactiveorFinished ? 'Call' : '...'}</span>
           </button>
         ) : (
           <button
             onClick={handleDisconnect}
-            className="inline-block px-7 py-3 text-sm font-bold text-white bg-destructive-100 rounded-full min-w-28"
+            className="inline-block px-7 py-3 text-sm font-bold text-white bg-destructive-300 rounded-full min-w-28"
           >
             End
           </button>
