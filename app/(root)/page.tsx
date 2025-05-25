@@ -27,8 +27,8 @@ export default function Home() {
         <Image
           src="/hero.png"
           alt="hero"
-          width={400}
-          height={400}
+          width={350}
+          height={350}
           className="max-sm:mt-6"
           priority
         />

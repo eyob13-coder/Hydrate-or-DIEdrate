@@ -255,5 +255,8 @@
     --sidebar-ring: oklch(0.70 0.10 220);
   }
 
+.blue-gradient-purple {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600;
+}
 
   
