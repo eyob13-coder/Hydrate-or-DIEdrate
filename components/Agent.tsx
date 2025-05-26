@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-
 import { cn } from "@/lib/utils";
 import vapi from '@/lib/vapi.sdk'
 import { useRouter } from "next/navigation";
@@ -76,7 +75,7 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
   }, [])
 
   useEffect(() =>{
-    if(callStatus === CallStatus.FINISHED) router.push('')
+    if(callStatus === CallStatus.FINISHED) router.push('/')
   }, [messages, callStatus, type, userId]);
 
 
@@ -108,18 +107,18 @@ const isCallInactiveorFinished = callStatus === CallStatus.INACTIVE || callStatu
   return (
     <>
       <div className="flex sm:flex-row flex-col gap-10 items-center justify-between w-full">
-        <div className="flex-center flex-col gap-2 p-7 h-[400px] blue-gradient rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full">
+        <div className="flex-center flex-col gap-2 p-7 h-[400px] blue-gradient-gray rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full">
           <div className="z-10 flex items-center justify-center rounded-full size-[120px] relative">
             <Image src="/logo.png" alt="vapi" width={65} height={54} className="object-cover" />
             {isSpeaking && (
               <span className="absolute inline-flex size-5/6 animate-ping rounded-full bg-primary-200 opacity-75" />
             )}
           </div>
-          <h3>AI Assistant</h3>
+          <h3 className = "font-bold items-center justify-center" >AI Assistant</h3>
         </div>
 
         <div className="border-gradient p-0.5 rounded-2xl w-fit">
-          <div className="flex flex-col gap-2 justify-center items-center p-7 dark-gradient rounded-2xl min-h-full">
+          <div className="flex flex-col gap-2 justify-center items-center p-7 blue-gradient-gray rounded-2xl min-h-full">
             <Image
               src="/user-avatar.png"
               alt="user avatar"
@@ -142,14 +141,14 @@ const isCallInactiveorFinished = callStatus === CallStatus.INACTIVE || callStatu
 
       <div className="w-full flex justify-center mt-6">
         {callStatus !== CallStatus.ACTIVE ? (
-          <button onClick={handleCall} className="relative inline-block px-7 py-3 font-bold text-sm leading-5 text-white bg-success-300 rounded-full min-w-28">
+          <button onClick={handleCall} className="relative inline-block px-7 py-3 font-bold text-sm leading-5 text-white bg-green-500 rounded-full min-w-28">
             <span className={cn("absolute animate-ping rounded-full opacity-75", callStatus !== CallStatus.CONNECTING && "hidden")} />
             <span>{isCallInactiveorFinished ? 'Call' : '...'}</span>
           </button>
         ) : (
           <button
             onClick={handleDisconnect}
-            className="inline-block px-7 py-3 text-sm font-bold text-white bg-destructive-300 rounded-full min-w-28"
+            className=" inline-block px-7 py-3 text-sm font-bold text-white bg-red-500 rounded-full min-w-28"
           >
             End
           </button>
