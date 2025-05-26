@@ -12,20 +12,20 @@ export default function Home() {
         <div className="flex flex-col gap-6 max-w-lg">
           <h2 className="font-bold text-6xl">
             Hydrate Better, with{" "}
-            <span className="font-bold text-xl text-white">
+            <span className="font-bold text-5xl">
               AI Tracking & Feedback
             </span>
           </h2>
-          <p className="text-lg">Let AI help you reach your hydration goals</p>
+          <p className="text-lg text-white">Let AI help you reach your hydration goals</p>
           <Button
             asChild
-            className="max-sm:w-full w-fit bg-gray-500 text-green-300 hover:bg-primary-200/80 rounded-full font-bold px-5 cursor-pointer min-h-10 justify-center items-center"
+            className="max-sm:w-full w-fit bg-amber-100 text-green-300 hover:bg-primary-200/80 rounded-full font-bold px-5 cursor-pointer min-h-10 justify-center items-center"
           >
             <Link href="/assistant">Start your Hydration</Link>
           </Button>
         </div>
         <Image
-          src="/hero.jpg"
+          src="/hero.png"
           alt="hero"
           width={350}
           height={350}

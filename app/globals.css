@@ -256,7 +256,7 @@
   }
 
 .blue-gradient-purple {
-  @apply bg-gradient-to-r from-blue-500 to-purple-600;
+  @apply bg-gradient-to-r from-blue-500 to-blue-200;
 }
 
   
