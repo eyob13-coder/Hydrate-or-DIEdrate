@@ -43,8 +43,8 @@ export default function Home() {
           <Image
             src="/hydration-benefits.png" 
             alt="Hydration Benefits"
-            width={700}
-            height={400}
+            width={500}
+            height={300}
             className="rounded-xl shadow-lg"
           />
         </div>

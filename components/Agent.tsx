@@ -75,7 +75,7 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
   }, [])
 
   useEffect(() =>{
-    if(callStatus === CallStatus.FINISHED) router.push('/')
+    if(callStatus === CallStatus.FINISHED) router.push('')
   }, [messages, callStatus, type, userId]);
 
 
