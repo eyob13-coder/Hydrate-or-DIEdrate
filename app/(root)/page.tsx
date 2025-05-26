@@ -19,7 +19,7 @@ export default function Home() {
           <p className="text-lg text-white">Let AI help you reach your hydration goals</p>
           <Button
             asChild
-            className="max-sm:w-full w-fit bg-white text-green-300 hover:bg-primary-200/80 rounded-full font-bold px-5 cursor-pointer min-h-10 justify-center items-center"
+            className="max-sm:w-full w-fit bg-white text-green-300 hover:bg-primary-200/80 rounded-full font-bold px-5 cursor-pointer min-h-10 justify-center items-center text-bold"
           >
             <Link href="/assistant">Start your Hydration</Link>
           </Button>
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
 
         {/* Four Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-white rounded-2xl shadow p-4 flex flex-col items-center text-center">
             <Image src="/brain.jpg" alt="brain" width={40} height={40} />
             <h4 className="text-lg font-semibold mt-2">Boosts Brain Power</h4>
