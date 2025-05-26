@@ -10,22 +10,22 @@ export default function Home() {
       {/* HERO SECTION */}
       <div className="flex flex-row blue-gradient-purple rounded-3xl px-16 py-6 items-center justify-between max-sm:flex-col max-sm:px-4">
         <div className="flex flex-col gap-6 max-w-lg">
-          <h2 className="font-bold text-2xl">
+          <h2 className="font-bold text-6xl">
             Hydrate Better, with{" "}
-            <span className="font-bold text-xl bg-gradient-to-r from-cyan-600 to-blue-800 bg-clip-text text-transparent">
+            <span className="font-bold text-xl text-white">
               AI Tracking & Feedback
             </span>
           </h2>
           <p className="text-lg">Let AI help you reach your hydration goals</p>
           <Button
             asChild
-            className="max-sm:w-full w-fit bg-primary-200 text-blue-300 hover:bg-primary-200/80 rounded-full font-bold px-5 cursor-pointer min-h-10"
+            className="max-sm:w-full w-fit bg-gray-500 text-green-300 hover:bg-primary-200/80 rounded-full font-bold px-5 cursor-pointer min-h-10 justify-center items-center"
           >
             <Link href="/assistant">Start your Hydration</Link>
           </Button>
         </div>
         <Image
-          src="/hero.png"
+          src="/hero.jpg"
           alt="hero"
           width={350}
           height={350}
@@ -36,7 +36,7 @@ export default function Home() {
 
       {/* WHY WATER MATTERS SECTION */}
       <div className="container mx-auto p-4 mt-10">
-        <h3 className="text-2xl font-bold text-center mb-6">💧 Why Water Matters</h3>
+        <h3 className="text-5xl font-bold text-center mb-6">💧 Why Water Matters</h3>
 
         {/* Illustration */}
         <div className="flex justify-center mb-6">
