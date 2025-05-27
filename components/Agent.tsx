@@ -83,28 +83,24 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
   const handleCall = async() => {
     setCallStatus (CallStatus.CONNECTING);
     await vapi.start({
-      model:{
-        provider: "vapi",
-        workflow: {
-          id: "bdf3911c-88e5-470e-b1c6-a4aaa6b8afd1",
-
-        },
-      },
       transcriber: {
         provider: "deepgram",
         model: "nova-2",
         language: "en-US",
       },
+      model: {
+        provider: "vapi",
+        model: "workflow",
+        workflowId: "bdf3911c-88e5-470e-b1c6-a4aaa6b8afd1"
+      },
       voice: {
         provider: "playht",
         voiceId: "jennifer",
       },
-      variables: {
+      variableValues: {
         userName,
       }
-    }
-      
-    )
+    })
     }
 
 const handleDisconnect = async () =>{
